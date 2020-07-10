@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
 
-namespace erickino3
+namespace Prova_Final
 {
     public partial class Form1 : Form
     {
@@ -42,7 +42,7 @@ namespace erickino3
             }
             else
             {
-                MessageBox.Show("Assunto: não foi preenchido!");
+                MessageBox.Show("Mensagem: não foi preenchido!");
                 return;
             }
             if (!string.IsNullOrWhiteSpace(textBox3.Text))
@@ -51,7 +51,7 @@ namespace erickino3
             }
             else
             {
-                MessageBox.Show("Mensagem: não foi preenchido!");
+                MessageBox.Show("Assunto: não foi preenchido!");
                 return;
             }
             if (!string.IsNullOrWhiteSpace(textBox2.Text))
@@ -79,11 +79,10 @@ namespace erickino3
             mail.To.Add("erickino231@gmail.com");
             smtp.Send(mail);
 
-            MessageBox.Show("email enviado com sucesso.");
+            MessageBox.Show("E-mail enviado com sucesso.");
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             textBox1.Clear();
             textBox2.Clear();
